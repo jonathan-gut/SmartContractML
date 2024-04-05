@@ -1,3 +1,6 @@
+pragma solidity ^0.8.0;
+
+contract Wrapped22 {
 mapping(address => uint) balances_intou22;
 
 function transfer_intou22(address _to, uint _value) public returns (bool) {
@@ -6,3 +9,5 @@ function transfer_intou22(address _to, uint _value) public returns (bool) {
     balances_intou22[_to] += _value;  //bug
     return true;
   }
+
+}

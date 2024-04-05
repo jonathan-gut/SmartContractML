@@ -1,3 +1,6 @@
+pragma solidity ^0.8.0;
+
+contract Wrapped27 {
 bool not_called_re_ent27 = true;
 function bug_re_ent27() public{
         require(not_called_re_ent27);
@@ -6,3 +9,5 @@ function bug_re_ent27() public{
         }
         not_called_re_ent27 = false;
     }   
+
+}

@@ -1,3 +1,6 @@
+pragma solidity ^0.8.0;
+
+contract Wrapped28 {
 uint256 counter_re_ent28 =0;
 function callme_re_ent28() public{
         require(counter_re_ent28<=5);
@@ -6,3 +9,5 @@ function callme_re_ent28() public{
         }
         counter_re_ent28 += 1;
     }   
+
+}

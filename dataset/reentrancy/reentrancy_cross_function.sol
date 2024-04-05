@@ -4,14 +4,14 @@
  * @vulnerable_at_lines: 24
  */
 
-pragma solidity ^0.4.0;
+pragma solidity ^0.7.0;
 
 contract Reentrancy_cross_function {
 
     // INSECURE
     mapping (address => uint) private userBalances;
 
-    function transfer(address to, uint amount) {
+    function transfer(address to, uint amount) public {
         if (userBalances[msg.sender] >= amount) {
             userBalances[to] += amount;
             userBalances[msg.sender] -= amount;
@@ -21,7 +21,7 @@ contract Reentrancy_cross_function {
     function withdrawBalance() public {
         uint amountToWithdraw = userBalances[msg.sender];
         // <yes> <report> REENTRANCY
-        (bool success, ) = msg.sender.call.value(amountToWithdraw)(""); // At this point, the caller's code is executed, and can call transfer()
+        (bool success, ) = msg.sender.call{value:amountToWithdraw}(""); // At this point, the caller's code is executed, and can call transfer()
         require(success);
         userBalances[msg.sender] = 0;
     }

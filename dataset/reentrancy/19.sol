@@ -1,3 +1,6 @@
+pragma solidity ^0.8.0;
+
+contract Wrapped19 {
 mapping(address => uint) userBalance_re_ent19;
 function withdrawBalance_re_ent19() public{
         // send userBalance[msg.sender] ethers to msg.sender
@@ -7,3 +10,5 @@ function withdrawBalance_re_ent19() public{
         }
         userBalance_re_ent19[msg.sender] = 0;
     }
+
+}

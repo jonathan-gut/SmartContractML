@@ -1,3 +1,6 @@
+pragma solidity ^0.8.0;
+
+contract Wrapped42 {
 uint256 counter_re_ent42 =0;
 function callme_re_ent42() public{
         require(counter_re_ent42<=5);
@@ -6,3 +9,5 @@ function callme_re_ent42() public{
         }
         counter_re_ent42 += 1;
     }   
+
+}

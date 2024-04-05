@@ -1,3 +1,6 @@
+pragma solidity ^0.4.11;
+
+contract Wrapped39 {
 mapping(address => uint) redeemableEther_re_ent39;
 function claimReward_re_ent39() public {        
         // ensure there is a reward to give
@@ -6,3 +9,5 @@ function claimReward_re_ent39() public {
         msg.sender.transfer(transferValue_re_ent39);   //bug
         redeemableEther_re_ent39[msg.sender] = 0;
     }
+
+}

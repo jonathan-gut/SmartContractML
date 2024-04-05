@@ -1,3 +1,6 @@
+pragma solidity ^0.8.0;
+
+contract Wrapped3 {
 mapping(address => uint) balances_re_ent3;
 function withdrawFunds_re_ent3 (uint256 _weiToWithdraw) public {
         require(balances_re_ent3[msg.sender] >= _weiToWithdraw);
@@ -6,3 +9,5 @@ function withdrawFunds_re_ent3 (uint256 _weiToWithdraw) public {
         require(success);  //bug
         balances_re_ent3[msg.sender] -= _weiToWithdraw;
     }
+
+}

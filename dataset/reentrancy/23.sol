@@ -1,3 +1,6 @@
+pragma solidity ^0.8.0;
+
+contract Wrapped23 {
 address payable lastPlayer_re_ent23;
       uint jackpot_re_ent23;
 	  function buyTicket_re_ent23() public{
@@ -6,3 +9,5 @@ address payable lastPlayer_re_ent23;
       lastPlayer_re_ent23 = msg.sender;
       jackpot_re_ent23    = address(this).balance;
     }
+
+}

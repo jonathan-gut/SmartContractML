@@ -4,7 +4,7 @@
  * @vulnerable_at_lines: 28
  */
 
-pragma solidity ^0.4.0;
+pragma solidity ^0.8.0;
 
 contract Reentrancy_bonus{
 
@@ -16,7 +16,7 @@ contract Reentrancy_bonus{
     function withdrawReward(address recipient) public {
         uint amountToWithdraw = rewardsForA[recipient];
         rewardsForA[recipient] = 0;
-        (bool success, ) = recipient.call.value(amountToWithdraw)("");
+        (bool success, ) = recipient.call{value:amountToWithdraw}("");
         require(success);
     }
 
