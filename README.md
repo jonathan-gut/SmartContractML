@@ -4,8 +4,9 @@
 
 This project employs a K-Nearest Neighbors (KNN) machine learning model to identify potential security vulnerabilities in smart contracts. It aims to improve the security of smart contracts by analyzing their characteristics and predicting vulnerabilities.
 
-##Usage
-1 - Download py-solc-x (to turn sol)
+## Usage
+1 - Install required packages
+`py-solc-x`
 
 ## Features
 
