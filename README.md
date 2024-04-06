@@ -39,4 +39,8 @@ https://www.nature.com/articles/s41598-023-47219-0
 ## Notes
 4/5/23 - Added functionality to turn solidity contracts into ASTs. However, I had to do a lot of manual editing to get the contracts to compile. No big changes but a lot of contracts now have small changes from their original version. Don't know if this will make a difference in end classification results. Next steps is to do the same for some safe smart contracts with no vulnerabilities
 
+4/6/23 - Added about 1000 more vulnerable smart contracts and about 400 safe ones. Also removed those vulnerabilities which had less than 50 samples. All smart contracts are able to be turned into ASTs.
+
+## Next Steps
+Extract feature vectors out of ASTs for KNN model
 
