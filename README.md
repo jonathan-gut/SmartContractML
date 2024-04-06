@@ -4,6 +4,9 @@
 
 This project employs a K-Nearest Neighbors (KNN) machine learning model to identify potential security vulnerabilities in smart contracts. It aims to improve the security of smart contracts by analyzing their characteristics and predicting vulnerabilities.
 
+##Usage
+1 - Download py-solc-x (to turn sol)
+
 ## Features
 
 - Predictive analysis using the KNN algorithm.
@@ -14,9 +17,18 @@ This project employs a K-Nearest Neighbors (KNN) machine learning model to ident
 The solidity smart contracts for this project has come from the following public datasets:
 1. https://swcregistry.io/
 2. https://github.com/DependableSystemsLab/SolidiFI
-3. https://github.com/smartbugs/smartbugs
+3. https://github.com/smartbugs/smartbugs-curated
+4. https://github.com/Messi-Q/Smart-Contract-Dataset
 
-We have about 430 malacious smart contracts
+We have a total of 1713 smart contracts, here they are based on vulnerability
+* Time Manipulation - 430
+* Safe (No Vulnerability) - 364
+* Reentrancy - 346
+* Integer Overflow/Underflow (Arithmetic) - 323
+* Unchecked Low-level Calls - 137
+* Access Control - 59
+* Denial of Service - 54
+
 
 ## Refrences/Previous Work Done
 https://www.hindawi.com/journals/scn/2021/5798033/

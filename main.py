@@ -1,6 +1,7 @@
 import os
 from solcx import compile_files, install_solc, get_installed_solc_versions
 import re
+import os
 import json
 
 # Function to extract the pragma version from a Solidity file, defaulting to 0.4.23
@@ -15,12 +16,16 @@ def extract_solidity_version(file_path):
     # Return default version if no pragma is found
     return '0.4.23'
 
+
 # Function to traverse directories and process .sol files
 def process_directory(parent_directory):
+    i = 0
     asts = {}  # Initialize a dictionary to hold the ASTs
     for root, dirs, files in os.walk(parent_directory):
         subdirectory = os.path.relpath(root, parent_directory)  # Get relative path from parent_directory
         for filename in files:
+            print(i)
+            i += 1
             if filename.endswith('.sol'):
                 file_path = os.path.join(root, filename)
                 print("Processing:", file_path)
