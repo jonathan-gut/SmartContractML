@@ -1,4 +1,4 @@
-pragma solidity ^0.8.0;
+pragma solidity ^0.4.11;
 
 contract Wrapped42 {
 uint256 counter_re_ent42 =0;

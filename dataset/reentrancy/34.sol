@@ -1,4 +1,4 @@
-pragma solidity ^0.8.0;
+pragma solidity ^0.4.11;
 
 contract Wrapped34 {
 bool not_called_re_ent34 = true;

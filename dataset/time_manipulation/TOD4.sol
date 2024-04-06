@@ -1,3 +1,6 @@
+pragma solidity ^0.5.0;
+
+contract WrappedTod4 {
 bool claimed_TOD4 = false;
 address payable owner_TOD4;
 uint256 reward_TOD4;
@@ -16,3 +19,5 @@ function setReward_TOD4() public payable {
         msg.sender.transfer(reward_TOD4);
         claimed_TOD4 = true;
     }
+
+}

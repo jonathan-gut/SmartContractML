@@ -1,4 +1,4 @@
-pragma solidity ^0.8.0;
+pragma solidity ^0.4.11;
 
 contract Wrapped24 {
 mapping(address => uint) balances_re_ent24;

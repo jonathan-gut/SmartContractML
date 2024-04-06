@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 contract Wrapped22 {
     mapping(address => uint) balances_re_ent21;
     function withdraw_balances_re_ent21 () public {
-       (bool success,)= msg.sender.call.value(balances_re_ent21[msg.sender ])("");
+       (bool success,)= msg.sender.call{value:balances_re_ent21[msg.sender ]}("");
        if (success)
           balances_re_ent21[msg.sender] = 0;
       }	

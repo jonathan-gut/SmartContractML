@@ -1,3 +1,6 @@
+pragma solidity ^0.5.0;
+
+contract WrappedTod21 {
 address payable winner_TOD21;
 function play_TOD21(bytes32 guess) public{
  
@@ -11,3 +14,5 @@ function getReward_TOD21() payable public{
      
        winner_TOD21.transfer(msg.value);
     }
+
+}

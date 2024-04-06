@@ -1,8 +1,7 @@
 import os
 import re
 
-# Set the directory containing your .sol files
-source_directory = './dataset/reentrancy'
+source_directory = './dataset/unchecked_low_level_calls'
 
 
 # Function to check if the file content has a pragma directive
@@ -18,7 +17,7 @@ def is_wrapped(content):
 # Function to wrap content in a contract and add pragma
 def wrap_and_add_pragma(content, filename):
     contract_name = "Wrapped" + os.path.splitext(os.path.basename(filename))[0].capitalize()
-    return f"pragma solidity ^0.8.0;\n\ncontract {contract_name} {{\n{content}\n}}"
+    return f"pragma solidity ^0.5.0;\n\ncontract {contract_name} {{\n{content}\n}}"
 
 
 # Iterate over all .sol files in the directory
@@ -28,12 +27,10 @@ for filename in os.listdir(source_directory):
         with open(file_path, 'r') as file:
             content = file.read()
 
-            # Check if the file is missing a pragma directive and is not wrapped
             if not has_pragma(content) and not is_wrapped(content):
                 # Update the content
                 new_content = wrap_and_add_pragma(content, filename)
 
-                # Write the updated content back to the file
                 with open(file_path, 'w') as mod_file:
                     mod_file.write(new_content)
                 print(f"Updated {filename}")

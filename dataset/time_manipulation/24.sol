@@ -1,3 +1,6 @@
+pragma solidity ^0.5.0;
+
+contract Wrapped24 {
 function bug_tmstmp24 () public payable {
 	uint pastBlockTime_tmstmp24; // Forces one bet per block
 	require(msg.value == 10 ether); // must send 10 ether to play
@@ -7,3 +10,5 @@ function bug_tmstmp24 () public payable {
             msg.sender.transfer(address(this).balance);
         }
     }
+
+}
