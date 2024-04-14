@@ -34,7 +34,8 @@ We have a total of 1713 smart contracts, here they are based on vulnerability
 * Access Control - 59
 * Denial of Service - 54
 
-#Results
+## Results
+
 ### Classification Report
 
 | Class                    | Precision | Recall | F1-Score | Support |
