@@ -41,6 +41,7 @@ https://www.nature.com/articles/s41598-023-47219-0
 
 4/6/23 - Added about 1000 more vulnerable smart contracts and about 400 safe ones. Also removed those vulnerabilities which had less than 50 samples. All smart contracts are able to be turned into ASTs.
 
+4/14/23 - Moved code to a jupyter notebook for easier executing. Added functionality to turn ASTs into feature vectors. Had to downsize dataset b/c it would of taken over 200 hours to compute all common nodes for all contracts. Moved down from ~1700 to ~1400 solidity files. Total of ~1700 total contracts (some .sol have multiple contracts)
 ## Next Steps
-Extract feature vectors out of ASTs for KNN model
+Train KNN Model
 
