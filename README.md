@@ -5,7 +5,7 @@
 This project employs a K-Nearest Neighbors (KNN) machine learning model to identify potential security vulnerabilities in smart contracts. It aims to improve the security of smart contracts by analyzing their characteristics and predicting vulnerabilities.
 
 ## Usage
-1 - Clone this directory \
+1 - Clone this repository \
 2 - Open .ipynb file or .py file\
 3 - Install required packages `pip install --user -r requirements.txt`\
 4 - Run code!
