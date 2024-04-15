@@ -36,21 +36,24 @@ We have a total of 1713 smart contracts, here they are based on vulnerability
 
 ## Results
 
+I found that the best results came from a value of neighbors = 8. This gave us the highest overall precision
+
+
 ### Classification Report
 
-| Class                    | Precision | Recall | F1-Score | Support |
-|--------------------------|-----------|--------|----------|---------|
-| `access_control`         | 0.92      | 0.71   | 0.80     | 17      |
-| `arithmetic`             | 0.48      | 0.51   | 0.50     | 113     |
-| `denial_of_service`      | 0.94      | 0.83   | 0.88     | 18      |
-| `reentrancy`             | 0.63      | 0.68   | 0.65     | 121     |
-| `safe`                   | 0.74      | 0.63   | 0.68     | 41      |
-| `time_manipulation`      | 0.70      | 0.73   | 0.71     | 143     |
-| `unchecked_low_level_calls` | 0.86  | 0.75   | 0.80     | 81      |
-|                          |           |        |          |         |
-| **Accuracy**             |           |        | 0.67     | 534     |
-| **Macro Avg**            | 0.75      | 0.69   | 0.72     | 534     |
-| **Weighted Avg**         | 0.68      | 0.67   | 0.67     | 534     |
+| Class                      | Precision | Recall | F1-Score | Support |
+|----------------------------|-----------|--------|----------|---------|
+| `access_control`           | 0.92      | 0.65   | 0.76     | 17      |
+| `arithmetic`               | 0.50      | 0.53   | 0.51     | 113     |
+| `denial_of_service`        | 0.93      | 0.78   | 0.85     | 18      |
+| `reentrancy`               | 0.61      | 0.67   | 0.64     | 121     |
+| `safe`                     | 0.73      | 0.66   | 0.69     | 41      |
+| `time_manipulation`        | 0.71      | 0.73   | 0.72     | 143     |
+| `unchecked_low_level_calls`| 0.87      | 0.74   | 0.80     | 81      |
+|                            |           |        |          |         |
+| **Accuracy**               |           |        | 0.67     | 534     |
+| **Macro Avg**              | 0.75      | 0.68   | 0.71     | 534     |
+| **Weighted Avg**           | 0.68      | 0.67   | 0.67     | 534     |
 
 
 
