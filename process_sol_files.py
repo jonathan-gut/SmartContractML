@@ -19,22 +19,7 @@ def wrap_and_add_pragma(content, filename):
     contract_name = "Wrapped" + os.path.splitext(os.path.basename(filename))[0].capitalize()
     return f"pragma solidity ^0.5.0;\n\ncontract {contract_name} {{\n{content}\n}}"
 
-"""
-# Iterate over all .sol files in the directory
-for filename in os.listdir(source_directory):
-    if filename.endswith('.sol'):
-        file_path = os.path.join(source_directory, filename)
-        with open(file_path, 'r') as file:
-            content = file.read()
 
-            if not has_pragma(content) and not is_wrapped(content):
-                # Update the content
-                new_content = wrap_and_add_pragma(content, filename)
-
-                with open(file_path, 'w') as mod_file:
-                    mod_file.write(new_content)
-                print(f"Updated {filename}")
-"""
 def version_to_tuple(version):
     """Convert a version string into a tuple of integers."""
     return tuple(map(int, version.split('.')))
